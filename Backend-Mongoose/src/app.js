@@ -1,7 +1,12 @@
 const express = require("express");
+const applyMiddleware = require("./middlewares/applyMiddleware");
 const app = express();
 require("dotenv").config();
 const port = process.env.PORT || 5000;
+
+//called middleware from applyMiddleware
+applyMiddleware(app);
+
 
 app.get("/health", (req, res) => {
     res.send("Backend Server is Running");
