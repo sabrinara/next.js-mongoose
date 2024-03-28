@@ -24,4 +24,4 @@ const connectDB = async () => {
     console.log("Connected to DATABASE");
 };  
 
-module.exports = connectDB
+module.exports = connectDB;
